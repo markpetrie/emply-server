@@ -9,7 +9,7 @@ describe('Category', () => {
     it('validates good model', () => {
         const category = new Category({
             name: 'Office Supplies',
-            budget: 1000,
+            amount: 1000,
             department: 'HR'
         });
         return category.validate();
@@ -21,7 +21,7 @@ describe('Category', () => {
             .then(expectedValidation, err => {
                 const errors = err.errors;
                 assert.ok(errors.name && errors.name.kind === 'required');
-                assert.ok(errors.budget && errors.budget.kind === 'required');
+                assert.ok(errors.amount && errors.amount.kind === 'required');
             });
     });
 });
