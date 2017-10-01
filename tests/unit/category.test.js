@@ -6,6 +6,7 @@ const expectedValidation = () => {
 };
 
 describe('Category', () => {
+
     it('validates good model', () => {
         const category = new Category({
             name: 'Office Supplies',
